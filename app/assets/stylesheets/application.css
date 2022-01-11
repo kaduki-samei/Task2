@@ -91,3 +91,12 @@ td {
 .field, .actions {
   margin-bottom: 10px;
 }
+
+a {
+  color: #000;
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
