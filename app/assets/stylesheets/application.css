@@ -88,6 +88,10 @@ td {
   padding-right: 5px;
 }
 
+label {
+  display: block;
+}
+
 .field, .actions {
   margin-bottom: 10px;
 }
@@ -99,4 +103,12 @@ a {
 a:-webkit-any-link {
   cursor: pointer;
   text-decoration: underline;
+}
+
+#notice {
+  color: green;
+}
+
+.error_message {
+  color: red;
 }

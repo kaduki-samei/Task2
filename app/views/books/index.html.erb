@@ -1,3 +1,4 @@
+<p id="notice"><%= flash[:notice] %></p>
 <h1>Books</h1>
 <table>
   <thead>
@@ -21,13 +22,23 @@
 </table>
 
 <h2>New book</h2>
+<div class="error_message">
+<% if @book.errors.any? %>
+  <%= @book.errors.count %> errors prohibited this book from being saved:
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+</div>
 <%= form_with model: @book, local: true do |f| %>
   <div class="field">
-    <h4>タイトル</h4>
+    <%= f.label :name, "Title" %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <h4>本文</h4>
+    <%= f.label :name, "Body" %>
     <%= f.text_area :body %>
   </div>
   <div class="actions">
